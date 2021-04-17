@@ -5,12 +5,13 @@ from rest_framework.exceptions import NotFound
 
 from .models import Skill
 from .serializers.common import SkillSerializer
+from .serializers.populated import PopulatedSkillSerializer
 
 
 class SkillListView(APIView):
     def get(self, _request):
         skills = Skill.objects.all()
-        serialized_skills = SkillSerializer(skills, many=True)
+        serialized_skills = PopulatedSkillSerializer(skills, many=True)
         return Response(serialized_skills.data, status=status.HTTP_200_OK)
 
     def post(self, request):
@@ -32,7 +33,7 @@ class SkillDetailView(APIView):
 
     def get(self, _request, pk):
         skill = self.get_skill(pk=pk)
-        serialized_skill = SkillSerializer(skill)
+        serialized_skill = PopulatedSkillSerializer(skill)
         return Response(serialized_skill.data, status=status.HTTP_200_OK)
 
     def delete(self, _request, pk):

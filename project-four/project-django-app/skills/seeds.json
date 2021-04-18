@@ -1,0 +1,24 @@
+[
+{
+  "model": "skills.skill",
+  "pk": 3,
+  "fields": {
+    "name": "Juggling",
+    "description": "1",
+    "price": 32,
+    "image": "jpg",
+    "seller": []
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 4,
+  "fields": {
+    "name": "Singing 2",
+    "description": "1",
+    "price": 15,
+    "image": "jpg",
+    "seller": []
+  }
+}
+]

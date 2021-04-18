@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.exceptions import NotFound
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 from .models import Skill
 from .serializers.common import SkillSerializer
@@ -9,6 +10,8 @@ from .serializers.populated import PopulatedSkillSerializer
 
 
 class SkillListView(APIView):
+    permission_classes = (IsAuthenticated,)
+
     def get(self, _request):
         skills = Skill.objects.all()
         serialized_skills = PopulatedSkillSerializer(skills, many=True)

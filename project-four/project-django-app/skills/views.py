@@ -10,7 +10,7 @@ from .serializers.populated import PopulatedSkillSerializer
 
 
 class SkillListView(APIView):
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def get(self, _request):
         skills = Skill.objects.all()
@@ -18,6 +18,8 @@ class SkillListView(APIView):
         return Response(serialized_skills.data, status=status.HTTP_200_OK)
 
     def post(self, request):
+
+        request.data["owner"] = request.user.id
         skill_to_add = SkillSerializer(data=request.data)
         if skill_to_add.is_valid():
             skill_to_add.save()

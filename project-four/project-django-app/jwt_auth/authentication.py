@@ -23,7 +23,7 @@ class JWTAuthentication(BasicAuthentication):
 
             user = User.objects.get(pk=payload.get("sub"))
 
-        except jwt.exceptions.InvaliTokeError:
+        except jwt.exceptions.InvalidTokenError:
             raise PermissionDenied(detail="Invalid token")
         except User.DoesNotExist:
             raise PermissionDenied(detail="User not found")

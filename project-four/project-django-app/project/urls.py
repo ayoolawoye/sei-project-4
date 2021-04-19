@@ -21,4 +21,5 @@ urlpatterns = [
     path("api/skills/", include("skills.urls")),
     path("api/comments/", include("comments.urls")),
     path("api/sellers/", include("seller.urls")),
+    path("api/auth/", include("jwt_auth.urls")),
 ]

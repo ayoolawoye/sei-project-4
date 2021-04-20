@@ -1,2 +1,28 @@
 @import "~bulma/bulma.sass";
 
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height:550px;
+
+	color:#fff;
+	text-align:center;
+
+	// background-image:
+	// 	linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+	// 	url('../images/melbourne.jpg');
+	background-color: #f7882f;
+  background-size:cover;
+}
+
+.hero-content {
+	max-width:600px;
+	font-weight: 700;
+}
+.hero-content p {
+	font-size:24px;
+}
+.hero-button {
+	margin-top:20px;
+}

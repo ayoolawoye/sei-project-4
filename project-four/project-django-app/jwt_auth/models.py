@@ -8,3 +8,11 @@ class User(AbstractUser):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     profile_image = models.CharField(max_length=300)
+    about_me = models.CharField(max_length=500, null=True)
+    skills = models.ForeignKey(
+        "skills.Skill",
+        related_name="user_skills",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+    )

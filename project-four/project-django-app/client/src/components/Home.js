@@ -10,10 +10,19 @@ const Home = () => {
       <div className="section-header section-header-home ">
       </div>
 
-      <section className="hero is-large is-link">
+      {/* <section className="hero is-large is-link">
         <div className="hero-body" id="hero-body">
         </div>
-      </section>
+      </section> */}
+
+      <div className="hero">
+        <div className="hero-content">
+          <h1 className="shadow">Melbourne</h1>
+          <p>From footy to fashion, the cultural capital of Australia dares to stay on the cutting edge.</p>
+          <Link className="button hero-button">Find a neighbourhood</Link>
+        </div>
+      </div>
+
       <section className="section">
         <ul className="grid">
           <li className="grid-item box hover-box">

@@ -16,11 +16,12 @@ const SkillIndex = () => {
 
   return (
     <div className="section">
+      <hi>Skills</hi>
       <div className="container">
         {skills &&
           <div className="columns is-multiline">
-            {skills.map(skills => (
-              <SkillCard key={skills._id} {...skills} />
+            {skills.map(skill => (
+              <SkillCard key={skill._id} {...skill} />
             ))}
           </div>
         }

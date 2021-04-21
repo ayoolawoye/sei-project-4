@@ -4,7 +4,14 @@ const Footer = () => {
 
 
   return (
-    <h2>Footer</h2>
+    <footer className="footer">
+      <div className="content has-text-centered">
+        <p>
+          <strong>FindASkill</strong> by
+          <a href="https://github.com/ayoolawoye"> Ayo</a>.
+        </p>
+      </div>
+    </footer>
   )
 }
 

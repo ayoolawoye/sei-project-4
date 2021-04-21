@@ -17,13 +17,13 @@ const Home = () => {
 
       <div className="hero">
         <div className="hero-content">
-          <h1 className="shadow">Melbourne</h1>
+          <h1 className="shadow" id="title-name">FindASkill</h1>
           <p>From painting to knitting, no matter how random, there’s someone that can help...</p>
-          <Link className="button hero-button">Find a skill</Link>
+          <Link to="/skills" className="button hero-button">Search skills</Link>
         </div>
       </div>
 
-      <section className="section">
+      {/* <section className="section">
         <ul className="grid">
           <li className="grid-item box hover-box">
             <Link to="/doodle-new" className="homepage page-doodle">
@@ -36,7 +36,7 @@ const Home = () => {
             </Link>
           </li>
         </ul>
-      </section>
+      </section> */}
     </div>
   )
 }

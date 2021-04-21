@@ -8,5 +8,8 @@ class Comment(models.Model):
         "skills.Skill", related_name="comments", on_delete=models.CASCADE
     )
     owner = models.ForeignKey(
-        "jwt_auth.User", related_name="comments", on_delete=models.CASCADE
+        "jwt_auth.User",
+        related_name="comments",
+        on_delete=models.CASCADE,
+        null=True,
     )

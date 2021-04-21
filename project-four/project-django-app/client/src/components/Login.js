@@ -1,87 +1,67 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-
-import { loginPopUp } from './extras/popUps'
-
+import axios from 'axios'
 
 const Login = () => {
-  const history = useHistory()
+
   const [formData, setFormData] = useState({
-    usernameOrEmail: '',
+    email: '',
     password: '',
   })
+  const history = useHistory()
 
-  const [wasLoginSuccess, setWasLoginSuccess] = useState(null)
-  console.log('🐝 ~ file: Login.js ~ line 15 ~ wasLoginSuccess', wasLoginSuccess)
-
-  const handleChange = (event) => {
-    //?get the value of what's being typed in the form and updating state
+  const handleChange = event => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
-    console.log('🐝 ~ file: Login.js ~ line 14 ~ event', event)
     setFormData(newFormData)
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault()
-    // if()
-    try {
-      const response = await axios.post('api/login', formData)
-      console.log('🐝 ~ file: Login.js ~ line 26 ~ response', response.data.message)
-      setWasLoginSuccess(true)
-      loginPopUp(true)
-      window.localStorage.setItem('token', response.data.token)
-      console.log('🐝 ~ file: Login.js ~ line 26 ~ response', response)
-      history.push('/doodle-new')
-    } catch (err) {
-      console.log('🐝 ~ file: Login.js ~ line 33 ~ err', err.response)
-      setWasLoginSuccess(false)
-      loginPopUp(false)
-    }
+    const response = await axios.post('http://ga-cheesebored.herokuapp.com/login', formData)
+    window.localStorage.setItem('token', response.data.token)
+    history.push('/cheeses')
   }
 
   return (
-    <div className="main has-text-centered">
-      <p className="subtitle is-4">Login </p>
-      <br />
-      <form onSubmit={handleSubmit} className="box column is-half is-offset-one-quarter">
-        <div className="field">
-          <label className="label" >
-            <div className="control">
-              <input
-                className="input"
-                placeholder="Username or email"
-                name="usernameOrEmail"
-                onChange={handleChange}
-                value={formData.usernameOrEmail}
-              />
+    <section className="section">
+      <div className="container">
+        <div className="columns">
+          <form onSubmit={handleSubmit} className="box column is-half is-offset-one-quarter">
+            <div className="field">
+              <label className="label">Email
+                <div className="control">
+                  <input
+                    className="input"
+                    placeholder="Email"
+                    name="email"
+                    onChange={handleChange}
+                    value={formData.email}
+                  />
+                </div>
+              </label>
             </div>
-            Username or Email
-          </label>
-
-        </div>
-        <div className="field">
-          <label className="label">
-            <div className="control">
-              <input
-                className="input"
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={handleChange}
-              //value={formData.password}
-              />
+            <div className="field">
+              <label className="label">Password
+                <div className="control">
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    onChange={handleChange}
+                    value={formData.password}
+                  />
+                </div>
+              </label>
             </div>
-
-            Password</label>
-
+            <div className="field">
+              <button type="submit" className="button is-fullwidth is-warning">Log Me In!</button>
+            </div>
+          </form>
         </div>
-        <div className="field-button">
-          <button className="button box is-fullwidth hover-box">Login</button><br />
-        </div>
-      </form>
-
-    </div>
+      </div>
+    </section>
   )
 }
+
 export default Login

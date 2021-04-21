@@ -11,7 +11,7 @@ const SkillCard = ({ _id, name, image, description }) => {
           </div>
           <div className="card-image">
             <figure className="image image-is-1by1">
-              <img src={image} alt={`${name} Skill`} />
+              <img src={`../../assets/${image}`} alt={`${name} Skill`} />
             </figure>
           </div>
           <div className="card-content">

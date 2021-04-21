@@ -6,8 +6,8 @@ import Footer from './components/Footer'
 import Register from './components/Register'
 import Login from './components/Login'
 // import SkillShow from './components/SkillShow'
-import SkillCard from './components/SkillCard'
-import SkillShow from './components/SkillShow'
+import SkillIndex from './components/SkillIndex'
+// import SkillShow from './components/SkillShow'
 // import Profile from './components/Profile'
 
 
@@ -38,12 +38,12 @@ function App() {
             <Login />
           </Route>
 
-          <Route path='/gallery'>
+          {/* <Route path='/gallery'>
             <SkillShow />
-          </Route>
+          </Route> */}
 
-          <Route path='/skill'>
-            <SkillCard />
+          <Route path='/skills'>
+            <SkillIndex />
           </Route>
 
           {/* <Route exact path='/profile/:id'>

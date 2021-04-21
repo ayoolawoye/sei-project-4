@@ -5,13 +5,15 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import Register from './components/Register'
 import Login from './components/Login'
+import SkillCard from './components/SkillCard'
+import Profile from './components/Profile'
 
 
 
 function App() {
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch('/api/skills')
+      const res = await fetch('/api/skills/')
       console.log(await res.json())
 
     }
@@ -32,6 +34,14 @@ function App() {
 
           <Route path='/login'>
             <Login />
+          </Route>
+
+          <Route path='/gallery'>
+            <SkillCard />
+          </Route>
+
+          <Route exact path='/profile/:id'>
+            <Profile />
           </Route>
 
         </Switch>

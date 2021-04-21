@@ -6,5 +6,4 @@ from ..serializers.common import SkillSerializer
 
 class PopulatedSkillSerializer(SkillSerializer):
     comments = PopulatedCommentSerializer(many=True)
-    seller = SellerSerializer(many=True)
     owner = UserSerializer()

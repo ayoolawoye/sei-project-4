@@ -18,8 +18,8 @@ const Home = () => {
       <div className="hero">
         <div className="hero-content">
           <h1 className="shadow">Melbourne</h1>
-          <p>From footy to fashion, the cultural capital of Australia dares to stay on the cutting edge.</p>
-          <Link className="button hero-button">Find a neighbourhood</Link>
+          <p>From painting to knitting, no matter how random, there’s someone that can help...</p>
+          <Link className="button hero-button">Find a skill</Link>
         </div>
       </div>
 

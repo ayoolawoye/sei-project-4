@@ -5,8 +5,10 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import Register from './components/Register'
 import Login from './components/Login'
+// import SkillShow from './components/SkillShow'
 import SkillCard from './components/SkillCard'
-import Profile from './components/Profile'
+import SkillShow from './components/SkillShow'
+// import Profile from './components/Profile'
 
 
 
@@ -37,12 +39,16 @@ function App() {
           </Route>
 
           <Route path='/gallery'>
+            <SkillShow />
+          </Route>
+
+          <Route path='/skill'>
             <SkillCard />
           </Route>
 
-          <Route exact path='/profile/:id'>
+          {/* <Route exact path='/profile/:id'>
             <Profile />
-          </Route>
+          </Route> */}
 
         </Switch>
         <Footer />

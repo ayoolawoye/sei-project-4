@@ -1,27 +1,25 @@
-import { useState, useEffect } from 'react'
 import React from 'react'
-import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const SkillCard = (owner, description, price) => {
-  const [skills, setSkills] = useState(null)
-
-  useEffect(() => {
-    // make our request for the cheese data
-    const getData = async () => {
-      const response = await axios.get('/api/skills')
-      setSkills(response.data)
-    }
-    getData()
-  }, [])
-
-  if (!skills) return null
+const SkillCard = ({ _id, name, image, description }) => {
   return (
-    <>
-      <h2>{owner}</h2>
-      <h2>{description}</h2>
-      <h2>{price}</h2>
-    </>
-
+    <div className="column is-one-quarter-desktop is-one-third-tablet">
+      <Link to={`/skills/${_id}`}>
+        <div className="card">
+          <div className="card-header">
+            <div className="card-header-title">{name}</div>
+          </div>
+          <div className="card-image">
+            <figure className="image image-is-1by1">
+              <img src={image} alt={`${name} Skill`} />
+            </figure>
+          </div>
+          <div className="card-content">
+            <h5>{description}</h5>
+          </div>
+        </div>
+      </Link>
+    </div>
   )
 }
 

@@ -23,9 +23,9 @@ const Home = () => {
         </div>
       </div>
 
-      <section className="section">
+      {/* <section className="section">
         Hey
-      </section>
+      </section> */}
     </div>
   )
 }

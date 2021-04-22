@@ -9,8 +9,8 @@ const Navbar = () => {
   return (
     <div className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item" href="https://bulma.io">
-          <img src="./client/public/assets/skill-logo.png" height="28" alt="logo" />
+        <Link to="/" className="navbar-item" id="navbar-color">
+          <img src="https://i.imgur.com/chRTDRZ.png" id="logo-styling" alt="logo" />
         </Link>
 
         {/* <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="navbar-item">
           <div className="buttons">
-            <Link to="/register" className="button is-primary">
+            <Link to="/register" className="button is-primary" id="register-button">
               <strong>Register</strong>
             </Link>
             <Link to="/login" className="button is-light">

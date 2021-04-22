@@ -33,7 +33,7 @@ const Register = () => {
   }
 
   return (
-    <section className="section">
+    <section id="register-color" className="section">
       <div className="container">
         <div className="columns">
           <form className="column is-half is-offset-one-quarter box"
@@ -89,7 +89,7 @@ const Register = () => {
               </label>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">Register</button>
+              <button type="submit" className="button is-fullwidth is-warning" id="register-button">Register</button>
             </div>
           </form>
         </div>

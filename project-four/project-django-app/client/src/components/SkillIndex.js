@@ -16,7 +16,7 @@ const SkillIndex = () => {
 
   return (
     <div className="section" id="skills-background-image">
-      <h1>Pick a Skill</h1>
+      <h1 id="skill-title">Pick a Skill</h1>
       <div className="container">
         {skills &&
           <div className="columns is-multiline">

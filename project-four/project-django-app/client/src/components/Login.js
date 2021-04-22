@@ -23,7 +23,7 @@ const Login = () => {
   }
 
   return (
-    <section className="section">
+    <section id="login-color" className="section">
       <div className="container">
         <div className="columns">
           <form onSubmit={handleSubmit} className="box column is-half is-offset-one-quarter">
@@ -55,7 +55,7 @@ const Login = () => {
               </label>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">Log Me In!</button>
+              <button type="submit" className="button is-fullwidth is-warning" id="login-button">Login</button>
             </div>
           </form>
         </div>

@@ -8,7 +8,7 @@ const UserIndex = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get('/api/users')
+      const response = await axios.get('/api/user')
       setProfiles(response.data)
     }
     getData()

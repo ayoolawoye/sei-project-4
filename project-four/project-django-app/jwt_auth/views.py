@@ -13,6 +13,19 @@ from .serializers.common import UserSerializer
 User = get_user_model()
 
 
+class UserDetailView(APIView):
+    def get_user(self, pk):
+        try:
+            return User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            raise NotFound(detail="Cannot find that user")
+
+    def get(self, _request, pk):
+        user = self.get_user(pk=pk)
+        serialized_user = PopulatedUserSerializer(user)
+        return Response(serialized_user.data, status=status.HTTP_200_OK)
+
+
 class RegisterView(APIView):
     def post(self, request):
         user_to_create = UserSerializer(data=request.data)

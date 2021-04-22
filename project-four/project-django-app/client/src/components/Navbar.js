@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" alt="logo" />
+          <img src="./client/public/assets/skill-logo.png" height="28" alt="logo" />
         </Link>
 
         {/* <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

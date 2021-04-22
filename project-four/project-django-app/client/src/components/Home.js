@@ -17,25 +17,14 @@ const Home = () => {
 
       <div className="hero">
         <div className="hero-content">
-          <h1 className="shadow">Melbourne</h1>
+          <img className="img-responsive" src="https://i.imgur.com/XmzS9DT.png" alt="logo" />
           <p>From painting to knitting, no matter how random, there’s someone that can help...</p>
-          <Link className="button hero-button">Find a skill</Link>
+          <Link to="/skills" className="button hero-button">Find a skill</Link>
         </div>
       </div>
 
       <section className="section">
-        <ul className="grid">
-          <li className="grid-item box hover-box">
-            <Link to="/doodle-new" className="homepage page-doodle">
-              <p className="homepage-title shadow">Doodle</p>
-            </Link>
-          </li>
-          <li className="grid-item box hover-box">
-            <Link to="/gallery" className="homepage page-gallery">
-              <p className="homepage-title shadow">Gallery</p>
-            </Link>
-          </li>
-        </ul>
+        Hey
       </section>
     </div>
   )

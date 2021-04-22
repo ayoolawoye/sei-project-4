@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
-import SkillCard from './SkillCard'
+import UserCard from './UserCard'
 
-const SkillIndex = () => {
-  const [skills, setSkills] = useState(null)
+const UserIndex = () => {
+  const [profiles, setProfiles] = useState(null)
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get('/api/skills')
-      setSkills(response.data)
+      const response = await axios.get('/api/users')
+      setProfiles(response.data)
     }
     getData()
   }, [])
 
   return (
     <div className="section">
-      Pick a Skill
+      Profiles
       <div className="container">
-        {skills &&
+        {profiles &&
           <div className="columns is-multiline">
-            {skills.map(skill => (
-              <SkillCard key={skill._id} {...skill} />
+            {profiles.map(profile => (
+              <UserCard key={profile._id} {...profile} />
             ))}
           </div>
         }
@@ -30,4 +30,4 @@ const SkillIndex = () => {
   )
 }
 
-export default SkillIndex
+export default UserIndex

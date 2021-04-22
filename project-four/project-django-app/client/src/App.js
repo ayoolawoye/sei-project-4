@@ -9,6 +9,7 @@ import Login from './components/Login'
 import SkillIndex from './components/SkillIndex'
 // import SkillShow from './components/SkillShow'
 // import Profile from './components/Profile'
+import UserCard from './components/UserCard'
 
 
 
@@ -46,9 +47,9 @@ function App() {
             <SkillIndex />
           </Route>
 
-          {/* <Route exact path='/profile/:id'>
-            <Profile />
-          </Route> */}
+          <Route path='/profiles'>
+            <UserCard />
+          </Route>
 
         </Switch>
         <Footer />

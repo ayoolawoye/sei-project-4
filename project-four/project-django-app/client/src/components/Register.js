@@ -1,29 +1,43 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useHistory } from 'react-router'
 
 const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: '',
-    passwordConfirmation: '',
+    password_confirmation: '',
+    first_name: 'user',
+    last_name: 'user',
+    profile_image: 'image.jpg',
+    about_me: 'jpg',
+    skills: 'jpg',
   })
+
+  const history = useHistory()
 
   const handleChange = event => {
     const newFormData = { ...formData, [event.target.name]: event.target.value }
     setFormData(newFormData)
+    // console.log(formData, setFormData)
   }
   const handleSubmit = async event => {
     event.preventDefault()
+    console.log(formData)
+    console.log(JSON.stringify(formData, null, 2))
+
     const response = await axios.post('api/auth/register/', formData)
     console.log(response)
+    history.push('/login')
   }
 
   return (
     <section className="section">
       <div className="container">
         <div className="columns">
-          <form className="column is-half is-offset-one-quarter box" onSubmit={handleSubmit}>
+          <form className="column is-half is-offset-one-quarter box"
+            onSubmit={handleSubmit}>
             <div className="field">
               <label className="label">Username
                 <div className="control">
@@ -67,15 +81,15 @@ const Register = () => {
                   <input
                     type="password"
                     placeholder="Password Confirmation"
-                    name="passwordConfirmation"
-                    value={formData.passwordConfirmation}
+                    name="password_confirmation"
+                    value={formData.password_confirmation}
                     onChange={handleChange}
                   />
                 </div>
               </label>
             </div>
             <div className="field">
-              <button type="submit" className="button is-fullwidth is-warning">Register Me!</button>
+              <button type="submit" className="button is-fullwidth is-warning">Register</button>
             </div>
           </form>
         </div>

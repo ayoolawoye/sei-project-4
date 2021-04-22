@@ -17,9 +17,9 @@ const Login = () => {
 
   const handleSubmit = async event => {
     event.preventDefault()
-    const response = await axios.post('http://ga-cheesebored.herokuapp.com/login', formData)
+    const response = await axios.post('api/auth/login/', formData)
     window.localStorage.setItem('token', response.data.token)
-    history.push('/cheeses')
+    history.push('/profile')
   }
 
   return (

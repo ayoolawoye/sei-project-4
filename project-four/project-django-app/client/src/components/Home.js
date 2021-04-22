@@ -17,8 +17,8 @@ const Home = () => {
 
       <div className="hero">
         <div className="hero-content">
-          <img className="img-responsive" src="https://i.imgur.com/XmzS9DT.png" alt="logo" />
-          <p>From painting to knitting, no matter how random, there’s someone that can help...</p>
+          {/* <img className="img-responsive" src="https://i.imgur.com/XmzS9DT.png" alt="logo" /> */}
+          <p id="hero-writing">From painting to knitting, no matter how random, there’s someone that can help...</p>
           <Link to="/skills" className="button hero-button">Find a skill</Link>
         </div>
       </div>

@@ -15,7 +15,7 @@ const UserIndex = () => {
   }, [])
 
   return (
-    <div className="section">
+    <div className="section" >
       Profiles
       <div className="container">
         {profiles &&

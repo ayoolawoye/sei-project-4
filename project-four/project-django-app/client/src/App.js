@@ -10,7 +10,7 @@ import SkillIndex from './components/SkillIndex'
 // import SkillShow from './components/SkillShow'
 // import Profile from './components/Profile'
 // import UserCard from './components/UserCard'
-// import Singer from './components/Singer'
+
 
 
 
@@ -52,9 +52,7 @@ function App() {
             <UserCard />
           </Route>
 
-          <Route path='/profiles'>
-            <Singer />
-          </Route> */}
+
 
         </Switch>
         <Footer />

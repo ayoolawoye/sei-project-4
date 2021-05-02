@@ -1,24 +1,90 @@
 [
-  {
-    "model": "skills.skill",
-    "pk": 3,
-    "fields": {
-      "name": "Juggling",
-      "description": "1",
-      "price": 32,
-      "image": "jpg",
-      "seller": []
-    }
-  },
-  {
-    "model": "skills.skill",
-    "pk": 4,
-    "fields": {
-      "name": "Singing 2",
-      "description": "1",
-      "price": 15,
-      "image": "jpg",
-      "seller": []
-    }
+{
+  "model": "skills.skill",
+  "pk": 3,
+  "fields": {
+    "name": "Juggling",
+    "description": "learn to juggle with whatever you want",
+    "price": 32,
+    "image": "jpg",
+    "owner": 2
   }
+},
+{
+  "model": "skills.skill",
+  "pk": 4,
+  "fields": {
+    "name": "Singing",
+    "description": "Do you need a vocal coach? I'm here to help",
+    "price": 15,
+    "image": "jpg",
+    "owner": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 6,
+  "fields": {
+    "name": "Painting",
+    "description": "Any type of painting, walls, nails etc.",
+    "price": 500,
+    "image": "images/skill/findaskill.png",
+    "owner": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 7,
+  "fields": {
+    "name": "Wrestling",
+    "description": "I can teach you how to wrestle",
+    "price": 350,
+    "image": "images/skill/Light_Salmon_Simple_Industrial_Logo_1.png",
+    "owner": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 8,
+  "fields": {
+    "name": "Cooking",
+    "description": "Any type of cuisine you are interested in, we can help",
+    "price": 50,
+    "image": "images/skill/findaskill_1yUIqvQ.png",
+    "owner": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 9,
+  "fields": {
+    "name": "Knitting",
+    "description": "we have experts with crochet sticks",
+    "price": 20,
+    "image": "images/skill/findaskill_xlPnZ3x.png",
+    "owner": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 10,
+  "fields": {
+    "name": "Building",
+    "description": "Building Lego or houses",
+    "price": 1000,
+    "image": "images/skill/findaskill_6behUnN.png",
+    "owner": 2
+  }
+},
+{
+  "model": "skills.skill",
+  "pk": 11,
+  "fields": {
+    "name": "Poker",
+    "description": "I can be your poker partner or teach you to play",
+    "price": 300,
+    "image": "images/skill/findaskill_nxdSic6.png",
+    "owner": 2
+  }
+}
 ]

@@ -5,7 +5,9 @@ const SkillCard = ({ _id, name, image, description }) => {
 
 
   return (
-    <div className="column is-one-quarter-desktop is-one-third-tablet">
+
+    < div className="column is-one-quarter-desktop is-one-third-tablet" >
+      { console.log('image >>>', image)}
       <Link to={`/skills/${_id}`}>
         <div className="card">
           <div className="card-header">
@@ -21,7 +23,7 @@ const SkillCard = ({ _id, name, image, description }) => {
           </div>
         </div>
       </Link>
-    </div>
+    </div >
   )
 }
 

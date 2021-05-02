@@ -29,7 +29,11 @@ class Migration(migrations.Migration):
                 ('email', models.CharField(max_length=50, unique=True)),
                 ('first_name', models.CharField(max_length=50)),
                 ('last_name', models.CharField(max_length=50)),
+<<<<<<< HEAD
                 ('profile_image', models.CharField(max_length=300)),
+=======
+                ('profile_image', models.ImageField(upload_to='images/user/')),
+>>>>>>> origin
                 ('about_me', models.CharField(max_length=500, null=True)),
                 ('groups', models.ManyToManyField(blank=True, help_text='The groups this user belongs to. A user will get all permissions granted to each of their groups.', related_name='user_set', related_query_name='user', to='auth.Group', verbose_name='groups')),
             ],
